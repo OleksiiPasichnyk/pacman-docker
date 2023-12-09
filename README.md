@@ -23,3 +23,19 @@ docker compose -f docker-compose-deployment-pacman-and-mongo.yaml up -d
 ## stop deployment
 3. docker compose -f docker-compose-deployment-pacman-and-mongo.yaml down
 ## Have Fun!
+
+# How to launch pacman-docker on EC2
+## 
+```bash
+sudo su
+apt update
+apt install docker docker-compose -y
+git clone https://github.com/OleksiiPasichnyk/pacman-docker.git
+cd pacman-docker
+docker network create pacman-network
+docker-compose -f docker-compose-deployment-pacman-and-mongo.yaml up -d
+```
+# How to stop
+```bash
+docker-compose -f docker-compose-deployment-pacman-and-mongo.yaml down
+```
