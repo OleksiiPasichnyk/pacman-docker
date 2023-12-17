@@ -4,7 +4,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo
-  namespace: pacman
+  namespace: demo
   labels:
     app: mongo
 spec:
@@ -23,7 +23,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mongo-init-script
-  namespace: pacman
+  namespace: demo
 data:
   setup.sh: |
     #!/bin/bash
@@ -45,7 +45,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongo
-  namespace: pacman
+  namespace: demo
 spec:
   serviceName: "mongo"
   replicas: 1
