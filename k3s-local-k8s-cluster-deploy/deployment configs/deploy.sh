@@ -4,7 +4,7 @@ sleep 10
 kubens demo
 kubectl apply -f pacman-certificate.yaml 
 sleep 30
-kubectl -f mongo-deployment.yaml
+kubectl apply -f mongo-deployment.yaml
 sleep 60
 kubectl apply -f pacman-deployment.yaml
 sleep 30
