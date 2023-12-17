@@ -74,7 +74,7 @@ spec:
             name: mongo-init-script
   volumeClaimTemplates:
     - metadata:
-        name: mongo-data
+        name: mongo-data-demo
       spec:
         accessModes: ["ReadWriteOnce"]
         resources:
